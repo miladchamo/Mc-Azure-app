@@ -1,0 +1,22 @@
+<p>
+  {{message}} - test works, yes!
+</p>
+<div>
+  <button (click)="getAdvisorCompanyName()">Get Company Name (app-tier)</button>
+</div>
+<div>
+  <strong>Company Name:</strong> {{advisorCompanyName}}
+</div>
+<div>
+  <button (click)="getManualAssetTypes()">Get Manual Asset Types (web-tier)</button>
+</div>
+<div>
+  <strong>
+    Assets
+  </strong>
+  <div *ngFor="let asset of assets">
+    <span>
+      {{asset.Description}} - {{asset.IsChecked}} - {{asset.Value}}
+    </span>
+  </div>
+</div>
